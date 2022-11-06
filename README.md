@@ -1,2 +1,2 @@
-# crafting-interpreters
-Following along with Nystrom's book Crafting Interpreters.
+# Crafting Interpreters
+Following along with Nystrom's book [Crafting Interpreters](https://craftinginterpreters.com/).
