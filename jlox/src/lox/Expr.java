@@ -52,8 +52,9 @@ abstract class Expr {
         final Object value;
     }
     static class Unary extends Expr {
-        Unary(Token operator) {
+        Unary(Token operator, Expr right) {
             this.operator = operator;
+            this.right = right;
         }
 
         @Override
@@ -62,6 +63,7 @@ abstract class Expr {
         }
 
         final Token operator;
+        final Expr right;
     }
 
     abstract <R> R accept(Visitor<R> visitor);
