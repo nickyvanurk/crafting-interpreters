@@ -12,7 +12,7 @@ class Interpreter implements Expr.Visitor<Object> {
     }
 
     public Object visitLiteralExpr(Expr.Literal expr) {
-        return new Object();
+        return expr.value;
     }
 
     public Object visitUnaryExpr(Expr.Unary expr) {
