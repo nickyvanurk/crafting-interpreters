@@ -8,7 +8,7 @@ class Interpreter implements Expr.Visitor<Object> {
 
     @Override
     public Object visitGroupingExpr(Expr.Grouping expr) {
-        return new Object();
+        return evaluate(expr.expression);
     }
 
     public Object visitLiteralExpr(Expr.Literal expr) {
@@ -17,5 +17,9 @@ class Interpreter implements Expr.Visitor<Object> {
 
     public Object visitUnaryExpr(Expr.Unary expr) {
         return new Object();
+    }
+
+    private Object evaluate(Expr expr) {
+        return expr.accept(this);
     }
 }
